@@ -47,13 +47,13 @@ body{
   background-image: url('../images/hadouken.gif');
   width: 156px; 
   height: 90px;
-  /*display: none;*/
+  display: none;
   position: relative;
   top: 167px;
   left: -212px;
   float: left;
 }
 
-/** {
+//*{
   outline: red 1px solid;
-}*/
+}

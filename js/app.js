@@ -6,6 +6,11 @@ $(document).ready(function(){
   $('#hadouken-sound')[0].play();
   }
 
+  function playCool(){
+  $('#cool-sound')[0].volume = 0.5;
+  $('#cool-sound')[0].play();
+  }
+
 	$('.ryu').mouseenter(function(){
 		$('.ryu-still').hide();
 		$('.ryu-ready').show();
@@ -37,4 +42,20 @@ $(document).ready(function(){
 		$('.ryu-ready').show();
 		//ryu goes back to ready postion
 	});
+
+$('body').keydown(function(keycode){
+if(keycode.which==88){
+playCool();
+$('.ryu-still').hide();
+$('.ryu-ready').hide();
+$('.ryu-cool').show();
+}
+})
+
+.keyup(function(){
+	$('.ryu-cool').hide();
+	$('.ryu-ready').show();
+});
+
+
 });
